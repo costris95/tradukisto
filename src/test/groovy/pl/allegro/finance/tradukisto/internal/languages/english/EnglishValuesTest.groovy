@@ -1,13 +1,12 @@
 package pl.allegro.finance.tradukisto.internal.languages.english
 
+import pl.allegro.finance.tradukisto.ValueConverters
 import spock.lang.Specification
 import spock.lang.Unroll
 
-import static pl.allegro.finance.tradukisto.internal.Container.englishContainer
-
 class EnglishValuesTest extends Specification {
 
-    static converter = englishContainer().getNumbersConverter()
+    static converter = ValueConverters.ENGLISH_INTEGER
 
     @Unroll
     def "should convert #value to '#words' in English"() {

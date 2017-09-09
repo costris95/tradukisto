@@ -39,3 +39,8 @@ Added support for:
 
 Fixed incorrect translation of "2" for Czech
 
+## 1.0.0 (2017-09-06)
+
+Moved to Java 8. Added support for:
+
+  - Brazilian Portuguese
