@@ -49,6 +49,7 @@ dependencies {
     compile "com.google.guava:guava:18.0"
 //	testCompile "junit:junit:4.12"
     testCompile "org.spockframework:spock-core:1.1-groovy-2.4"  
+	compile group: 'net.java', name: 'quickcheck', version: '0.6'
 }
 
 jacocoTestReport {
