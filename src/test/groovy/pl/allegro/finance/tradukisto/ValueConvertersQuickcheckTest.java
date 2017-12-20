@@ -20,12 +20,32 @@ import org.junit.Test;
 public class ValueConvertersQuickcheckTest {
 
     @Test
-    public void convertNumbersBrazilianRandom() {
+    public void convertNumbersBrazilianEmpty() {
 
         for (Integer anyNumber : someIntegers(0, 10000000)) {
             String words = BRAZILIAN_PORTUGUESE_INTEGER.asWords(anyNumber);
             //System.out.println(words + "\n");
             assertFalse(words.isEmpty());
+        }
+    }
+    
+    @Test
+    public void convertNumbersBrazilianContainsNumbers() {
+
+        for (Integer anyNumber : someIntegers(0, 10000000)) {
+            String words = BRAZILIAN_PORTUGUESE_INTEGER.asWords(anyNumber);
+            //System.out.println(words + "\n");
+            assertFalse(words.matches(".*\\d+.*"));
+        }
+    }
+    
+    @Test
+    public void convertNumbersBrazilianContainsWeirdChars() {
+
+        for (Integer anyNumber : someIntegers(0, 10000000)) {
+            String words = BRAZILIAN_PORTUGUESE_INTEGER.asWords(anyNumber);
+            //System.out.println(words + "\n");
+            assertFalse(words.matches(".*[ρη].*"));
         }
     }
 

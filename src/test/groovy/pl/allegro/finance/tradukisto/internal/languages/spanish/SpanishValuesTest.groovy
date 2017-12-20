@@ -1,4 +1,4 @@
-package pl.allegro.finance.tradukisto.internal.languages.portuguese
+package pl.allegro.finance.tradukisto.internal.languages.spanish
 
 import spock.lang.Specification
 import spock.lang.Unroll
